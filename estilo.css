@@ -3,8 +3,13 @@
 :root {
     --base: #f8f9fa;
     --primario: #343a40;
-    --secundario: #17a2b8;
+    --secundario: #49ac92;
 }
+/*--base: #f8f9fa;
+    --primario: #343a40;
+    --secundario: #17a2b8;
+    
+    --secundario: #49ac92;*/
 
 * {
     margin: 0;
@@ -29,19 +34,21 @@ body {
     background: var(--base);
     display: grid;
     grid-template-columns: 1fr 2fr;
-    box-shadow: 0px 10px 25px #333;
+    box-shadow: 10px 20px 25px #333;
     margin: 1.5rem;
+    border-radius: 5%;
 }
 /*LADO IZQUIERDO*/
 #conteiner .lado_izq {
     background: var(--primario);
     padding: 1.5rem;
-
+    border-radius: 5%;
 }
-
+/*LADO IZQUIERDO*/
 #conteiner .lado_der {
     background: var(--base);
     padding: 1.5rem;
+    border-radius: 5%;
     
 }
 .perfil {
@@ -107,7 +114,12 @@ overflow: hidden;
 
 .item_izq .titulo {
     padding-bottom: 0.5rem;
+    text-decoration: underline;
 
+}
+
+.item_izq .titulo:hover {
+    color: #49ac92;
 }
 
 .item_izq ul li {
@@ -169,6 +181,11 @@ color: var(--primario);
 .item_der .titulo {
     text-transform: uppercase;
     margin-bottom: 0.8rem;
+    text-decoration: underline;
+}
+
+.item_der .titulo:hover{
+    color: #49ac92;
 }
 
 .experiencia {
@@ -257,7 +274,14 @@ color: var(--primario);
 @media (max-width: 800px){
     #conteiner{
         grid-template-columns: repeat(1,1fr);
+        border-radius: none;
     }
+    #conteiner .lado_izq{
+        border-radius: none;
+    }
+    #conteiner .lado_der{
+        border-radius: none;
+}
 }
 
 @media (max-width: 500px){

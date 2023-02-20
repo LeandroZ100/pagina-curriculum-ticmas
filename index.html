@@ -22,7 +22,7 @@
           </div>
           <h4>Leandro Zarco</h4>
           <h5>Front-end Junior</h5>
-          <button id="botonPDF">Descargar PDF</button>
+          
         </div>
 
         <!--INFO DE CONTACTO-->
@@ -33,21 +33,21 @@
               <span class="iconos">
                 <i class="bx bx-map"></i>
               </span>
-              <a href="https://www.google.com.ar/maps/"style="color:#FFFFFF;">Domicilio Personal</a>
+              <a href="#"style="color:#FFFFFF;">Domicilio: Av Siempreviva 742</a>
             </li>
 
             <li>
               <span class="iconos">
                 <i class="bx bx-envelope"></i>
               </span>
-              <a href="https://www.google.com/intl/es-419/gmail/about/"style="color:#FFFFFF;">Direccion de Email</a>
+              <a href="https://www.google.com/intl/es-419/gmail/about/"style="color:#FFFFFF;">Email: leandro100@gmail.com</a>
             </li>
             <li>
               <span class="iconos">
                 <i class="bx bx-phone"></i>
               </span>
 
-              <a href="https://web.whatsapp.com/"style="color:#FFFFFF;">Wathsaap Personal</a>
+              <a href="https://web.whatsapp.com/"style="color:#FFFFFF;">Tel Personal: 1198762345</a>
             </li>
           </ul>
         </div>
@@ -177,63 +177,6 @@
         </div>
       </div>
     </div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
-      integrity="sha512-cLuyDTDg9CSseBSFWNd4wkEaZ0TBEpclX0zD3D6HjI19pO39M58AgJ1SjHp6c7ZOp0/OCRcC2BCvvySU9KJaGw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"
-      integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-   <script>
-      var conteiner = document.getElementById(`conteiner`),
-        botonPDF = document.getElementById(`botonPDF`);
-
-      botonPDF.onclick = function () {
-        var doc = new jsPDF(`p`, `pt`, `letter`);
-        var margin = 20;
-        var scale =
-          (doc.internal.pageSize.width * 2) / document.body.clientWidth;
-        var scale_mobile =
-          (doc.internal.pageSize.width * 2) /
-          document.body.getBoundingClientRect();
-
-        // cheking
-        if (
-          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|OperaMini/i.test(
-            navigator.userAgent
-          )
-        ) {
-          //mobile
-          doc.html(conteiner, {
-            x: margin,
-            y: margin,
-            html2canvas: {
-              scale: scale_mobile,
-            },
-            callback: function (doc) {
-              doc.output(`dataurlnewwindow`, { filename: `pdf.pdf` });
-            },
-          });
-        } else {
-          // PC
-          doc.html(conteiner, {
-            x: margin,
-            y: margin,
-            html2canvas: {
-              scale: scale,
-            },
-            callback: function (doc) {
-              doc.output(`dataurlnewwindow`, { filename: `pdf.pdf` });
-            },
-          });
-        }
-      };
-    </script>
+    
   </body>
 </html>

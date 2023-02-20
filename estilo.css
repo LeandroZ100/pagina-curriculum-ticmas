@@ -5,11 +5,7 @@
     --primario: #343a40;
     --secundario: #49ac92;
 }
-/*--base: #f8f9fa;
-    --primario: #343a40;
-    --secundario: #17a2b8;
-    
-    --secundario: #49ac92;*/
+
 
 * {
     margin: 0;
@@ -80,6 +76,9 @@ overflow: hidden;
     font-size: 1.2rem;
     margin-top: 0.8rem;
     font-weight: 600;
+}
+.color_letra {
+    color: #f8f9fa;
 }
 
 .perfil h5 {
